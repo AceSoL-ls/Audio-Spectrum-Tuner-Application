@@ -8,6 +8,8 @@ This project is an idea of mine based on a real problem i came across aiming to 
 This is a golden oportunity for learning the basics of Android App development!
 Project may lack or include, professional Architecure-Design, Bugs and low Performance.
 
+---------------------UNDER DEVELOPMENT CONSTRUCTION----------------------
+
 
 
 
