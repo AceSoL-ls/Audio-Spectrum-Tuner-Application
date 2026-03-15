@@ -51,5 +51,27 @@ obj.setframerate(RATE)
 obj.writeframes(b''.join(frames))
 obj.close()
 
-#file = wave.open('Recording.wav', 'rb')
+# This is how our file gets rendered as graph!
+file = wave.open('Recording.wav', 'rb')
+
+sample_freq = file.getframerate()
+frames = file.getnframes()
+signal_wave = file.readframes(-1)
+
+file.close()
+
+time = frames / sample_freq
+
+audio_array = np.frombuffer(signal_wave, dtype=np.int16)
+
+times = np.linspace(0, time, num=frames)
+
+# Graph Window Settings
+plt.figure(figsize=(15, 5))
+plt.plot(times, audio_array)
+plt.ylabel('Signal Wave')
+plt.xlabel('Time (s)')
+plt.xlim(0, time)
+plt.title('My Audio Recording! ')
+plt.show()
 
