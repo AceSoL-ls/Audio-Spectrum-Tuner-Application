@@ -9,7 +9,7 @@ from pygame.mixer import Channel
 FRAMES_PER_BUFFER = 3200
 FORMAT = pyaudio.paInt16
 CHANNELS = 1
-RATE = 160000
+RATE = 44100
 
 pa = pyaudio.PyAudio()
 
